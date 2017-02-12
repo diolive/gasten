@@ -1,9 +1,9 @@
 ﻿using System;
 
 using DioLive.GaStEn.Engine;
-using DioLive.GaStEn.Engine.TicTacToe;
+using DioLive.TicTacToe.Engine;
 
-namespace DioLive.GaStEn.Client.TicTacToe
+namespace DioLive.TicTacToe.Client
 {
     public class Program
     {
@@ -44,28 +44,24 @@ namespace DioLive.GaStEn.Client.TicTacToe
                 Console.ResetColor();
             }
 
-            var playState = state as PlayState;
-            if (playState != null)
+            switch (state)
             {
-                ShowPlayState(playState);
-                return;
-            }
+                case PlayState playState:
+                    ShowPlayState(playState);
+                    break;
 
-            var drawState = state as DrawState;
-            if (drawState != null)
-            {
-                ShowDrawState(drawState);
-                return;
-            }
+                case DrawState drawState:
+                    ShowDrawState(drawState);
+                    break;
 
-            var winState = state as WinState;
-            if (winState != null)
-            {
-                ShowWinState(winState);
-                return;
-            }
+                case WinState winState:
+                    ShowWinState(winState);
+                    break;
 
-            Console.WriteLine("Undefined state type: " + state.GetType().Name);
+                default:
+                    Console.WriteLine($"Undefined state type: {state.GetType().Name}");
+                    break;
+            }
         }
 
         private static void ShowPlayState(PlayState playState)

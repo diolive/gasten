@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DioLive.GaStEn.Engine.Mastermind
+using DioLive.GaStEn.Engine;
+
+namespace DioLive.Mastermind.Engine
 {
     public class PlayState : State
     {

@@ -1,4 +1,4 @@
-﻿namespace DioLive.GaStEn.Engine.Mastermind
+﻿namespace DioLive.Mastermind.Engine
 {
     public class TestResult
     {

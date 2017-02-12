@@ -1,4 +1,6 @@
-﻿namespace DioLive.GaStEn.Engine.Mastermind
+﻿using DioLive.GaStEn.Engine;
+
+namespace DioLive.Mastermind.Engine
 {
     public class MastermindStateMachine : StateMachine
     {

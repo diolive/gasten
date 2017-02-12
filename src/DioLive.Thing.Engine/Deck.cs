@@ -23,8 +23,10 @@ namespace DioLive.Thing.Engine
             List<Card> noPanic = cards.Where(c => c.Type != CardTypes.Infection && !c.Type.HasFlag(CardTypes.Panic)).ToList();
 
             int initialCount = Constants.HandSize * playerCount;
-            List<Card> initial = new List<Card>(initialCount);
-            initial.Add(thing);
+            List<Card> initial = new List<Card>(initialCount)
+            {
+                thing
+            };
             initial.AddRange(Deck.Shuffle(noPanic).Take(initialCount - 1));
 
             cards.ExceptWith(initial);
@@ -37,7 +39,7 @@ namespace DioLive.Thing.Engine
 
         public Card Take()
         {
-            var card = this.talon.Dequeue();
+            Card card = this.talon.Dequeue();
 
             if (this.talon.Count == 0)
             {
@@ -51,7 +53,7 @@ namespace DioLive.Thing.Engine
         {
             while (true)
             {
-                var card = this.Take();
+                Card card = this.Take();
                 if (criterio(card))
                 {
                     return card;
@@ -67,9 +69,9 @@ namespace DioLive.Thing.Engine
 
         public void Reshuffle()
         {
-            var list = new List<Card>(this.talon.Concat(this.discard));
+            List<Card> list = new List<Card>(this.talon.Concat(this.discard));
             this.discard.Clear();
-            this.talon = new Queue<Card>(Deck.Shuffle(list));
+            this.talon = new Queue<Card>(Shuffle(list));
         }
 
         private static IEnumerable<Card> GetAllCards()

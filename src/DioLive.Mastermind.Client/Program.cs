@@ -1,5 +1,6 @@
 ﻿using System;
 
+using DioLive.GaStEn.Engine;
 using DioLive.Mastermind.Engine;
 
 namespace DioLive.Mastermind.Client
@@ -15,7 +16,7 @@ namespace DioLive.Mastermind.Client
                 Console.Write("Enter your assumption: ");
                 string assumption = Console.ReadLine();
 
-                var result = engine.Test(assumption);
+                ProcessResult result = engine.Test(assumption);
                 if (result.Success)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;

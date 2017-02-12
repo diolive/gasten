@@ -24,7 +24,7 @@ namespace DioLive.Mastermind.Engine
             char[] mixed = new char[length];
             for (int i = 0; i < length; i++)
             {
-                var index = Rnd.Next(digits.Count);
+                int index = Rnd.Next(digits.Count);
                 mixed[i] = digits[index].ToString()[0];
                 digits.RemoveAt(index);
             }
@@ -46,7 +46,7 @@ namespace DioLive.Mastermind.Engine
 
         private ProcessResult Process(TestMessage message)
         {
-            var result = this.Test(message.Assumption);
+            TestResult result = this.Test(message.Assumption);
             if (result.Success)
             {
                 if (result.Bulls < message.Assumption.Length)

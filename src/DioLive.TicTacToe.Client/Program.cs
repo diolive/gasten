@@ -12,7 +12,7 @@ namespace DioLive.TicTacToe.Client
             TicTacToeStateMachine engine = new TicTacToeStateMachine();
 
             ShowState(engine.CurrentState, null);
-            var result = engine.Mark('X', 1, 2);
+            ProcessResult result = engine.Mark('X', 1, 2);
             Console.WriteLine(result.Success);
             //// Console.WriteLine(engine.ProcessMessage(new SetMarkMessage { UserChar = 'X', X = 1, Y = 2 }));
 
@@ -83,7 +83,7 @@ namespace DioLive.TicTacToe.Client
             Console.WriteLine("Solution:");
             for (int i = 0; i < winState.FieldSize; i++)
             {
-                var point = winState.Solution[i];
+                Point point = winState.Solution[i];
                 Console.Write($"{point.X}:{point.Y}  -  ");
             }
 

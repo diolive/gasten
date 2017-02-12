@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace DioLive.GaStEn.Engine.Thing
+using DioLive.GaStEn.Engine;
+
+namespace DioLive.Thing.Engine
 {
     public class PlayState : State
     {

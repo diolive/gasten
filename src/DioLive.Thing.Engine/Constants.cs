@@ -1,4 +1,4 @@
-﻿namespace DioLive.GaStEn.Engine.Thing
+﻿namespace DioLive.Thing.Engine
 {
     internal static class Constants
     {

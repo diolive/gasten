@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DioLive.GaStEn.Engine.Thing
+namespace DioLive.Thing.Engine
 {
     public class Deck
     {

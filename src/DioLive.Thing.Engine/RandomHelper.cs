@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DioLive.GaStEn.Engine.Thing
+namespace DioLive.Thing.Engine
 {
     public static class RandomHelper
     {

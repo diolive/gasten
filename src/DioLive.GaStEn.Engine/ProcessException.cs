@@ -5,11 +5,12 @@ namespace DioLive.GaStEn.Engine
     public class ProcessException : Exception
     {
         public ProcessException()
-            : base("Process exception")
+            : base()
         {
         }
 
-        public ProcessException(string message) : base(message)
+        public ProcessException(string message) 
+            : base(message)
         {
         }
 

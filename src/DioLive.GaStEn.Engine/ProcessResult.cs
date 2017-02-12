@@ -3,14 +3,14 @@
     public class ProcessResult
     {
         private ProcessResult(ProcessResults result, string statusMessage)
+            : this(result, statusMessage, null)
         {
-            this.Result = result;
-            this.StatusMessage = statusMessage;
         }
 
         private ProcessResult(ProcessResults result, string statusMessage, State nextState)
-            : this(result, statusMessage)
         {
+            this.Result = result;
+            this.StatusMessage = statusMessage;
             this.State = nextState;
         }
 

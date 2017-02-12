@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Linq;
 
-namespace DioLive.GaStEn.Engine.TicTacToe
+using DioLive.GaStEn.Engine;
+
+namespace DioLive.TicTacToe.Engine
 {
     public abstract class BaseState : State
     {
         private int fieldSize;
         private byte[,] field;
         private int movesLeft;
-        private string status;
 
         protected BaseState(States state, int fieldSize)
             : base((int)state)
@@ -21,7 +22,6 @@ namespace DioLive.GaStEn.Engine.TicTacToe
             this.fieldSize = fieldSize;
             this.field = new byte[fieldSize, fieldSize];
             this.movesLeft = fieldSize * fieldSize;
-            this.status = null;
         }
 
         protected BaseState(States state, byte[,] field)

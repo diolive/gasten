@@ -1,4 +1,4 @@
-﻿namespace DioLive.GaStEn.Engine.TicTacToe
+﻿namespace DioLive.TicTacToe.Engine
 {
     public class Point
     {

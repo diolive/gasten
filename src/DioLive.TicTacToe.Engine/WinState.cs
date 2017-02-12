@@ -1,4 +1,6 @@
-﻿namespace DioLive.GaStEn.Engine.TicTacToe
+﻿using DioLive.GaStEn.Engine;
+
+namespace DioLive.TicTacToe.Engine
 {
     public class WinState : BaseState
     {

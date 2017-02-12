@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-namespace DioLive.GaStEn.Engine.TicTacToe
+using DioLive.GaStEn.Engine;
+
+namespace DioLive.TicTacToe.Engine
 {
     public class PlayState : BaseState
     {

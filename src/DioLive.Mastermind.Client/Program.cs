@@ -1,8 +1,8 @@
 ﻿using System;
 
-using DioLive.GaStEn.Engine.Mastermind;
+using DioLive.Mastermind.Engine;
 
-namespace DioLive.GaStEn.Client.Mastermind
+namespace DioLive.Mastermind.Client
 {
     public class Program
     {
